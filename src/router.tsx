@@ -12,7 +12,7 @@ const homeRoute = new Route({
 
 const authRoute = new Route({
   getParentRoute: () => rootRoute,
-  path: "authPage",
+  path: "authentication",
   component: AuthPage,
 });
 
