@@ -1,14 +1,12 @@
 export default function LoginPage() {
   return (
-    <section>
-      <div className="flex">
-        <div className="md:max-md">
-          <img className="md:max-md" src="./src/assets/_41f5958b-daaa-4131-9fec-8b3900cc29f6.jpg" alt="" />
+    <main className="min-h-screen grid grid-cols-1 md:grid-cols-2">
+        <div className="hidden md:block">
+          <img className="h-full" src="/images/login.jpg" alt="login image" />
         </div>
-        <div className="text-center">
+        <div className="flex justify-center items-center">
           <h2 className="">This is my form</h2>
-        </div>
       </div>
-    </section>
+    </main>
   );
 }
