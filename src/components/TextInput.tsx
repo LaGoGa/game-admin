@@ -1,17 +1,27 @@
 import { useState } from "react";
 
-export default function TextInput() {
+interface Props {
+  onChange: (value: string) => void;
+  label: string;
+  description: string;
+  placeholder: string;
+}
+
+export default function TextInput({ onChange, label, description, placeholder }: Props) {
   const [textValue, setTextValue] = useState("");
   return (
     <div className="flex flex-col">
-      <label className="font-bold text-base">Login</label>
-      <span className="font-light text-sm">Write your login below</span>
+      <label className="text-base font-bold">{label}</label>
+      <span className="text-sm font-light">{description}</span>
       <input
         className="rounded border-2 border-solid border-indigo-400  "
         type="text"
         value={textValue}
-        placeholder="Random shit"
-        onChange={event => setTextValue(event.target.value)}
+        placeholder={placeholder}
+        onChange={event => {
+          setTextValue(event.target.value);
+          onChange(event.target.value);
+        }}
       />
     </div>
   );
