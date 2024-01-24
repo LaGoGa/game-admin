@@ -1,4 +1,5 @@
 import TextInput from "@/components/TextInput";
+import Button from "@/components/Button";
 
 export default function LoginPage() {
   const handleLogin = (value: string) => console.log("Login: ", value);
@@ -20,6 +21,9 @@ export default function LoginPage() {
             description="Write your password below"
             placeholder="Password"
           />
+        </div>
+        <div>
+          <Button />
         </div>
       </div>
     </main>
