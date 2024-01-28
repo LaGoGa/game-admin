@@ -14,7 +14,7 @@ export default function TextInput({ onChange, label, description, placeholder }:
       <label className="text-base font-bold">{label}</label>
       <span className="text-sm font-light">{description}</span>
       <input
-        className="rounded border-2 border-solid border-indigo-400  "
+        className="border-2 border-solid border-indigo-400  "
         type="text"
         value={textValue}
         placeholder={placeholder}

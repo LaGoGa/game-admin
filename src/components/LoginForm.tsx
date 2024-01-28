@@ -4,7 +4,7 @@ export default function LoginForm() {
   const handleLogin = (value: string) => console.log("Login: ", value);
   const handlePassword = (value: string) => console.log("Password: ", value);
   return (
-    <form>
+    <form className="w-full">
       <div>
         <TextInput onChange={handleLogin} label="Login" description="Write your login below" placeholder="Login" />
       </div>

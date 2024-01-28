@@ -5,7 +5,7 @@ export default function LoginPage() {
       <div className="hidden md:block">
         <img className="h-full" src="/images/login.jpg" alt="login image" />
       </div>
-      <div className="flex flex-col items-center justify-center">
+      <div className="flex flex-col items-center justify-center mx-5">
         <LoginForm />
       </div>
     </main>
