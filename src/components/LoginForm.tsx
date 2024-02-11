@@ -1,4 +1,5 @@
 import LoginFormContext from "@/context/LoginFormContext";
+import { CheckboxWrapper } from "@/wrappers/CheckboxWrapper";
 import { LoginInputWrapper } from "@/wrappers/LoginInputWrapper";
 import { PasswordInputWrapper } from "@/wrappers/PasswordInputWrapper";
 
@@ -13,6 +14,9 @@ export default function LoginForm() {
         </div>
         <div>
           <PasswordInputWrapper />
+        </div>
+        <div>
+          <CheckboxWrapper />
         </div>
         <div>
           <Button />
