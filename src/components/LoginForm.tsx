@@ -1,24 +1,23 @@
-import TextInput from "./TextInput";
+import LoginFormContext from "@/context/LoginFormContext";
+import { LoginInputWrapper } from "@/wrappers/LoginInputWrapper";
+import { PasswordInputWrapper } from "@/wrappers/PasswordInputWrapper";
+
 import Button from "./Button";
+
 export default function LoginForm() {
-  const handleLogin = (value: string) => console.log("Login: ", value);
-  const handlePassword = (value: string) => console.log("Password: ", value);
   return (
-    <form className="w-full">
-      <div>
-        <TextInput onChange={handleLogin} label="Login" description="Write your login below" placeholder="Login" />
-      </div>
-      <div>
-        <TextInput
-          onChange={handlePassword}
-          label="Password"
-          description="Write your password below"
-          placeholder="Password"
-        />
-      </div>
-      <div>
-        <Button />
-      </div>
-    </form>
+    <LoginFormContext>
+      <form className="w-full">
+        <div>
+          <LoginInputWrapper />
+        </div>
+        <div>
+          <PasswordInputWrapper />
+        </div>
+        <div>
+          <Button />
+        </div>
+      </form>
+    </LoginFormContext>
   );
 }

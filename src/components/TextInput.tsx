@@ -1,14 +1,12 @@
-import { useState } from "react";
-
 interface Props {
   onChange: (value: string) => void;
   label: string;
   description: string;
   placeholder: string;
+  value: string;
 }
 
-export default function TextInput({ onChange, label, description, placeholder }: Props) {
-  const [textValue, setTextValue] = useState("");
+export default function TextInput({ onChange, label, description, placeholder, value }: Props) {
   return (
     <div className="flex flex-col">
       <label className="text-base font-bold">{label}</label>
@@ -16,10 +14,9 @@ export default function TextInput({ onChange, label, description, placeholder }:
       <input
         className="border-2 border-solid border-indigo-400  "
         type="text"
-        value={textValue}
+        value={value}
         placeholder={placeholder}
         onChange={event => {
-          setTextValue(event.target.value);
           onChange(event.target.value);
         }}
       />
