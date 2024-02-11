@@ -5,7 +5,6 @@ interface Props {
 }
 
 export const Checkbox = ({ onChange, label, isChecked }: Props) => {
-  console.log(isChecked);
   return (
     <div>
       <input
